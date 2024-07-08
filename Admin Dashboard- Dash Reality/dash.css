@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+body{
+    margin: 0%;
+    padding: 0%;
+    font-family: "Nunito Sans";
+}
+
+.ads-hero-section{
+    background-image: url(lmages/dash-bg.jpg);
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+nav {
+    display: flex;
+    background-color: #085080;
+    justify-content: space-around;
+}
+#nav-links{
+    display: flex;
+    list-style: none;
+    padding: 10px;
+}
+#nav-links a{
+    text-decoration: none;
+    color: whitesmoke;
+    margin: 10px;
+    transition: all;
+    transition-duration: 500ms;
+}
+#logo-pic{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#logo-pic h2{
+    color: whitesmoke;
+}
+#nav-links a:hover{
+    color: rgba(201, 205, 243, 0.575);
+}
+
+#menu{
+    display: flex;
+    align-items: center; 
+}
+#menu:hover{
+    box-shadow: 20px white;
+}
+.nav-col-links{
+    display: none;
+}
+
+#nav-col-links a{
+    text-decoration: none;
+    color: white;
+    background-color: rgb(156, 152, 152);
+    transition: all;
+    transition-duration: 500ms;
+}
+#nav-col-links a:hover{
+    color: rgba(201, 205, 243, 0.575);
+}
+#link{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    background-color: #085080;
+    text-align: center;
+}
+#link:hover{
+    background-color: #085080;
+}
+
+
+
+.product-form{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items:center ;
+}
+.product-upload-button{
+    width: 200px;
+    height: 40px;
+    background-color: #085080;
+    color: whitesmoke;
+    transition: all 500ms;
+}
+.product-upload-button a{
+    text-decoration: none;
+}
+.product-upload-button:hover{
+    color: whitesmoke;
+}
+
+
+.dashboard-section{
+    width: 100% ;
+    height: 80vh ;
+    display: flex ;
+    align-items: center ;
+    justify-content: center ;
+}
+.dashboard-total-ads{
+    width: 20%;
+    height: 500px;
+    border: 1px solid #085080;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.login-body{
+    display: flex;
+    justify-content: center ;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column-reverse;
+    gap: 20px;
+    background-image: url(lmages/dash-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.login-section{
+    border-radius: 10px;
+    padding: 40px 20px;
+    box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
+    background-color: whitesmoke;
+}
+
+.login-section h3{
+    font-size: 30px;
+    text-align: center;
+}
+
+.login-section input{
+    width: 300px;
+    height: 40px;
+    background-color: rgba(66, 61, 61, 0.074);
+    border: 0;
+    border-radius: 5px;
+    padding-left: 10px;
+    font-size: 16px;
+}
+
+.login-section label{
+    font-size: 18px;
+}
+.login-button{
+    background: #085080 !important;
+    color: whitesmoke ;
+}
+
+.dashboard-total-ads h3{
+    font-size: 120px;
+}
+
+.flex-item{
+    display: flex;
+    margin: 20px auto;
+    width: 75%;
+    border-radius:2px;
+    background-color: white;
+    transition: all 500ms;
+    height: 300px;
+    box-shadow: 1px 1px 10px 2px #cfdfea;
+}
+.flex-item:hover{
+    box-shadow: 1px 1px 10px 2px #085080;
+}
+
+.dash-cart-img img{
+    width: 100%;
+    height: 100%;
+}
+
+.dash-cart{
+    display: flex;
+    gap: 20px;
+    font-family: "Nunito Sans";
+}
+.dash-address{
+    font-size: 20px;
+    color: #222;
+    font-weight: 700;
+}
+.dash-area{
+    color:#5c727d;
+    font-size: 18px;
+}
+.dash-price{
+    color: red;
+    font-size: 18px;
+    font-weight: 600;
+}
+.dash-year{
+    color:#5c727d;
+    font-size: 18px;
+}
+.dash-commission{
+    color:#5c727d;
+    font-size: 18px;
+}
+
+@media screen and (max-width: 800px) {
+    #nav-links{
+        display: none;
+    }
+
+}
+
+@media screen and (min-width: 800px) {
+    #menu{
+        display: none;
+    }
+     #nav-col{
+        display: none;
+    }
+    
+}
+
