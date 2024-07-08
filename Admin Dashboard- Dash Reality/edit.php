@@ -12,6 +12,11 @@ $adid = $_GET["adid"];
 
 $sql = "SELECT * FROM ads WHERE ad_id= {$adid}";
 $result = mysqli_query($conn, $sql) or die('Failed to fetch data');
+
+$row = mysqli_num_rows($result);
+if ($row > 0) {
+  $property = mysqli_fetch_assoc($result);
+
  
 
 if (isset($_POST['update_ad'])) {
@@ -25,7 +30,13 @@ if (isset($_POST['update_ad'])) {
   // image upload code start
   $pimage_name = $_FILES['property_image']['name'];
   $pimage_temp_name = $_FILES['property_image']['tmp_name'];
-  move_uploaded_file($pimage_temp_name,  "uploaded-Products/" . $pimage_name ); 
+
+  if (!empty($pimage_name)) {
+    move_uploaded_file($pimage_temp_name,  "uploaded-Products/" . $pimage_name);
+} else {
+    $pimage_name = $property['ad_img']; // Use existing image if no new image is uploaded
+}
+//   move_uploaded_file($pimage_temp_name,  "uploaded-Products/" . $pimage_name ); 
   // image upload code end
 
   $sql = "UPDATE `ads` SET `ad_address`='$paddress',`ad_price`='$pprice',`ad_size`='$psize',`ad_year`='$pyear',`ad_commission`='$pcommission',`ad_img`='$pimage_name' WHERE  ad_id = $adid";
@@ -84,11 +95,7 @@ if (isset($_POST['update_ad'])) {
 
 
 
-    <?php
-  $row = mysqli_num_rows($result);
-  if ($row > 0) {
-    $property = mysqli_fetch_assoc($result);
-  ?>
+
 
 
     <div class="product-form">
@@ -119,6 +126,11 @@ if (isset($_POST['update_ad'])) {
                 <input type="file" name="property_image" style="margin-left: 45px" value= "<?php echo  $property['ad_img'] ?>" > <br><br>
             </label><br><br>
 
+            <?php if (!empty($property['ad_img'])): ?>
+                <img src="uploaded-Products/<?php echo htmlspecialchars($property['ad_img']); ?>" alt="Current Property Image" style="max-width: 200px;"><br><br>
+            <?php endif; ?>
+    <br><br>
+
             <input type="submit" value="Update" name="update_ad" class="product-upload-button"  style="margin-left: 120px;">
         </form>
         <br>
@@ -130,7 +142,7 @@ if (isset($_POST['update_ad'])) {
 
   <?php
   } else {
-    echo "Failed to fetch student data";
+    echo "Failed to fetch data";
   }
 
   ?>
