@@ -61,6 +61,10 @@
             while ($row = mysqli_fetch_assoc($result)) {
 
         ?>
+
+    <div class="ads-flex-container">
+
+    
         <div class="flex-item" id="product-cart">
 
             <div class="dash-cart">
@@ -69,16 +73,18 @@
 
                     <div class="dash-cart-data">
                     <p class="dash-address"><?php echo $row['ad_address']?></p>
-                    <p class="dash-area"><?php echo $row['ad_size']?> Sq. Ft</p>
-                    <p class="dash-price">$ <?php echo $row['ad_price']?></p>
+                    <p class="dash-commission">Agent Commission: $<?php echo $row['ad_commission']?></p>
                     <p class="dash-year">Built Year :  <?php echo $row['ad_year']?></p>
-                    <p class="dash-commission">Agent Commission: $ <?php echo $row['ad_commission']?>/-</p>
+                    <p class="dash-price">Price : $<?php echo $row['ad_price']?></p>
+                    <p class="dash-area">Build : <?php echo $row['ad_size']?> yards</p>
                     </div>
 
                     <!-- Cart display Product End -->
             </div>            
 
-            </div>
+        </div>
+
+    </div>
      <?php
             }
         }else {

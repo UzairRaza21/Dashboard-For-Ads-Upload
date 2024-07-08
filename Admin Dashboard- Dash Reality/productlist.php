@@ -89,7 +89,7 @@ if (!isset($_SESSION['admin_name'])){
                 <td><?php echo $row['ad_size']?></td>
                 <td><?php echo $row['ad_year']?></td>
                 <td><?php echo $row['ad_commission'] ?></td>
-                <td><?php echo "<img style='width: 100px; height: 100px; border-radius:5px;' src='uploaded-Products/".$row['ad_img']."' >" ?></td>
+                <td><?php echo "<img style='width: 150px; height: 80px; border-radius:5px;' src='uploaded-Products/".$row['ad_img']."' >" ?></td>
                 <td>
                     <!-- Edit button -->
                 <a href="edit.php?adid=<?php echo $row['ad_id'];?>">

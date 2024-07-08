@@ -51,30 +51,30 @@ if (!isset($_SESSION['admin_name'])){
         <form action="product-insert.php" method="post" enctype="multipart/form-data" >
 
             <label for="property_address">Property Address
-                <input type="text" name="property_address" id="property-address" style="margin-left: 30px; width: 200px">
+                <input type="text" name="property_address" id="property-address" style="margin-left: 30px; width: 250px;height: 25px;border-radius: 5px">
             </label><br><br>
 
             <label for="property_size">Property Size
-                <input type="text" name="property_size" id="property-size" style="margin-left: 55px;width:200px">
+                <input type="text" name="property_size" id="property-size" style="margin-left: 60px;width:250px;height: 25px;border-radius: 5px">
             </label><br><br>
 
             <label for="property_price">Property Price
-                <input type="text" name="property_price" id="property-price" style="margin-left: 50px;width:200px">
+                <input type="text" name="property_price" id="property-price" style="margin-left: 53px;width:250px;height: 25px;border-radius: 5px">
             </label><br><br>
 
             <label for="property-year">Built Year
-                <input type="text" name="property_year" id="property-year" style="margin-left: 80px;width:200px">
+                <input type="text" name="property_year" id="property-year" style="margin-left: 85px;width:250px;height: 25px;border-radius: 5px">
             </label><br><br>
 
             <label for="property-commission">Agent Commission
-                <input type="text" name="property_commission" id="property-commission" style="margin-left: 10px;width:200px">
+                <input type="text" name="property_commission" id="property-commission" style="margin-left: 20px;width:250px;height: 25px;border-radius: 5px">
             </label><br><br>
 
             <label for="">Property Image
-                <input type="file" name="property_image" style="margin-left: 45px"> <br><br>
+                <input type="file" name="property_image" style="margin-left: 45px;"> <br><br>
             </label><br><br>
 
-            <input type="submit" value="Upload" name="upload_ad" class="product-upload-button"  style="margin-left: 10px;">
+            <input type="submit" value="Upload" name="upload_ad" class="product-upload-button"  style="margin-left: 180px;">
         </form>
         <br>
         <br>
